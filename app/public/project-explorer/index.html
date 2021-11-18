@@ -1,60 +1,41 @@
-!doctype html>
+<!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Project Explorer</title>
         <link rel="stylesheet" href="css/bootstrap.min.css"></link>
-        <style>
-            .card-title {
-                color: #007bff;
-            }
-        </style>
-        </head> 
-        <body>
-            <nav class="navbar navbar-expand-lg navbar-blue bg-secondary justify-content-between">
-            <a class="navbar-brand "href="index.html">Project Explorer</a>
+    </head>        
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-full bg-primary">
+            <a class="navbar-brand" href="index.html">Project Explorer</a>
+            <form class="form-inline" name="searchForm">
+                <label class="sr-only" for="searchForm">Search Projects:</label>
+                <input type="text" class="form-control" name="searchForm" placeholder="Search Projects">
+                <button type="submit" class="btn btn-outline-light">Search</button>
+            </form>
             <div class="collapse navbar-collapse">
-             <form class="form-inline">
-             <input class="form-control" type="text" placeholder="Search Projects" />
-             <button class="btn btn-outline-light btn-mg-10 btn-primary" type="button">Search</button>
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Submit</a>    
-                </li>
-              </ul>
-             </form>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a href="register.html" class="nav-link" style="color: white;" id="signup">Sign Up</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link" style="color: white;" id="login">Login</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" style="color: white; display: none;" id="logout">Logout</a></li>
+                    <li class="nav-item"><p class="navbar-text" style="color: white; display: none;" id="username"></p></li>
+                </ul>
             </div>
-            <ul class="navbar-nav mr-auto">
-                <li class ="nav-item">
-                    <a class="nav-link d-none text-white" href="#" id="logout">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white show" href="register.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white show" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="profile.html" id="username"></a>
-                </li>
-            </ul>    
-        </nav>                 
-<main>
-    <div class="jumbotron">
-        <h1 class="display-4">Welcome to Project Explorer</h1>
-        <p class="lead">Project Explorer is a repository for final year projects aross all departments at your institution. You can submit your project and search projects submitted by others to learn from.</p>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">  
-            <a class="btn btn-primary" href="register.html" role="button">Get Started</a>     
-            <a class="btn btn-secondary" href="login.html" role="button">Login</a>
-            </li>
-        </ul>
+        </nav>
+        <div class="jumbotron mt-4">
+            <h1 class="display-4">Welcome to Project Explorer</h1>
+            <p class="lead">Project Explorer ia a repository for final year project across all departments at your institution. You can submit your project and search projects submitted by others to learn from</p>
+            <div class="">
+                <a class="btn btn-primary" href="register.html" >Get started</a>
+                <a class="btn btn-secondary" href="login.html" >Login</a>
+            </div>
+        </div>
         <div class="row showcase">
-            <div class="col">
-                <div class="card">
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
                     <div class="card-body text-center">
                     <h5 class="card-title">Project Title</h5>
-                    <h6 class="card-subtitle">Author 1, Author 2</h6><br><br>
+                    <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6><br><br>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="card-link">#html</a>
                     <a href="#" class="card-link">#css</a>
@@ -62,11 +43,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">    
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">    
                     <div class="card-body text-center">
                     <h5 class="card-title">Project Title</h5>
-                    <h6 class="card-subtitle">Author 1, Author 2</h6><br><br>
+                    <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6><br><br>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="card-link">#html</a>
                     <a href="#" class="card-link">#css</a>
@@ -74,11 +55,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">    
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">    
                     <div class="card-body text-center">
                     <h5 class="card-title">Project Title</h5>
-                    <h6 class="card-subtitle">Author 1, Author 2</h6><br><br>
+                    <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6><br><br>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="card-link">#html</a>
                     <a href="#" class="card-link">#css</a>
@@ -86,11 +67,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">    
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">    
                     <div class="card-body text-center">
                     <h5 class="card-title">Project Title</h5>
-                    <h6 class="card-subtitle">Author 1, Author 2</h6><br><br>
+                    <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6><br><br>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="card-link">#html</a>
                     <a href="#" class="card-link">#css</a>
@@ -101,11 +82,11 @@
         </div>    
     </div>
 </main>
-    <footer class="container bg-light d-flex justify-content-end mt-3">
-              <p class="text-muted my-3">Project Explorer &copy; 2020 . <strong>Edconnect</strong></p>
-    </footer>         
+<footer class="container bg-light d-flex justify-content-end mt-3">
+    <p class="text-muted my-3">Project Explorer &copy; 2020 - <span class="text-dark">Edconnect</span></p>
+  </footer>
+
 <script src="js/app.js"></script>
 </body>
-</html>
 
-  
+</html>
