@@ -209,13 +209,12 @@ if (window.location.href.includes('createproject.html')) {
             let authorsInput = (document.getElementById("authors").value).split(",");
 
             let projectInfo = {
-                "name" :  document.getElementById("name").value,
+                "name" :  document.getElementById("ProjectName").value,
                 "abstract" : document.getElementById("abstract").value,
                 "tags" : tagsInput,
                 "authors" : authorsInput,
             }
-            
-            
+                  
             fetch('/api/projects', {
                 method: 'POST',
                 body: JSON.stringify(projectInfo), // All form data
