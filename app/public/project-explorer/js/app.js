@@ -209,10 +209,10 @@ if (window.location.href.includes('createproject.html')) {
             let authorsInput = (document.getElementById("authors").value).split(",");
 
             let projectInfo = {
-                name :  document.getElementById("name").value,
-                abstract : document.getElementById("abstract").value,
-                tags : tagsInput,
-                authors : authorsInput,
+                "name" :  document.getElementById("name").value,
+                "abstract" : document.getElementById("abstract").value,
+                "tags" : tagsInput,
+                "authors" : authorsInput,
             }
             
             
