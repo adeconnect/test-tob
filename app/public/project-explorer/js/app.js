@@ -206,14 +206,30 @@ if (window.location.href.includes('createproject.html')) {
         function handleSubmit(event) {
             event.preventDefault();
             
-            
+            const projectName = document.getElementById('projectName');
+            const projectAbstract = document.getElementById('abstract');
+            const projectAuthors = document.getElementById('authors');
+            const projectTags = document.getElementById('tags');
 
-            let projectInfo = {
-                "name" :  document.getElementById("projectName").value,
-                "abstract" : document.getElementById("abstract").value,
-                "tags" : document.getElementById("tags").value.split(","),
-                "authors" : document.getElementById("authors").value.split(",")
-            }
+            const projectNameValue = projectName.value.trim();
+            const projectAbstractValue = projectAbstract.value.trim();
+            const projectAuthorsValue = projectAuthors.value.trim();
+            const projectTagsValue = projectTags.value.trim();
+
+            const projectAuthorsValueArray = projectAuthorsValue.split(',').map((item) => {
+            return item.trim();
+            })
+            const projectTagsValueArray = projectTagsValue.split(' ').map((item) => {
+            return item.trim()
+            })
+
+            const projectInfo = {
+            "name": projectNameValue,
+            "abstract": projectAbstractValue,
+            "authors": projectAuthorsValueArray,
+            "tags": projectTagsValueArray,
+}
+           
                   
             fetch("/api/projects", {
                 method: 'POST',
