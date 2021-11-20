@@ -206,11 +206,13 @@ if (window.location.href.includes('createproject.html')) {
         function handleSubmit(event) {
             event.preventDefault();
             
+            
+
             let projectInfo = {
-                "name" :  document.getElementById("name").value,
+                "name" :  document.getElementById("projectName").value,
                 "abstract" : document.getElementById("abstract").value,
                 "tags" : document.getElementById("tags").value.split(","),
-                "authors" : document.getElementById("authors").value.split(","),
+                "authors" : document.getElementById("authors").value.split(",")
             }
                   
             fetch("/api/projects", {
