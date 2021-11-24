@@ -206,10 +206,10 @@ if (window.location.href.includes('createproject.html')) {
         function handleSubmit(event) {
             event.preventDefault();
             
-            const projectName = document.getElementById('projectName');
-            const projectAbstract = document.getElementById('abstract');
-            const projectAuthors = document.getElementById('authors');
-            const projectTags = document.getElementById('tags');
+            const projectName = document.getElementById("projectName");
+            const projectAbstract = document.getElementById("abstract");
+            const projectAuthors = document.getElementById("authors");
+            const projectTags = document.getElementById("tags");
 
             const projectNameValue = projectName.value.trim();
             const projectAbstractValue = projectAbstract.value.trim();
