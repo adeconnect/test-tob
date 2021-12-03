@@ -141,7 +141,7 @@ if (document.cookie) {
 
         // When user clicks the logout link
         let logout = document.getElementById("logout");
-        function HandleLogout(event) {
+        function handleLogout(event) {
             event.preventDefault();
             // Delete cookie
             document.cookie = "uid=; expires=Thu, 01 Jan 2000 00:00:00 UTC; path=/;";
@@ -157,7 +157,7 @@ if (window.location.href.includes("login.html")) {
     let dangerAlert = document.getElementById("dangerAlert")
     dangerAlert.style.display = "none"
     window.onload = function () {
-        function loginClick(e) {
+        function logInClick(e) {
             e.preventDefault();
             const data = new FormData(e.target);
             const value = Object.fromEntries(data.entries());
