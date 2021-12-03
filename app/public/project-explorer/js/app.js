@@ -147,10 +147,8 @@ if (document.cookie) {
             document.cookie = "uid=; expires=Thu, 01 Jan 2000 00:00:00 UTC; path=/;";
             // Redirect to index.html
             window.location.replace('index.html');
-            document.getElementById("login").style.visibility = "visible";
-            document.getElementById("signup").style.visibility = "visible";
-        }
-        logout.addEventListener('click', HandleLogout);
+            }
+        logout.addEventListener('click', handleLogout);
 }
 
 //setting the login.html
@@ -184,7 +182,7 @@ if (window.location.href.includes("login.html")) {
             .catch(error => console.log(error))
             
         }
-        login.addEventListener('submit', loginClick)
+        login.addEventListener('submit', logInClick)
     }
 
 }
@@ -271,7 +269,7 @@ if (window.location.href.includes("index.html")) {
         .then((response) => {
             console.log(response)
             let show = document.getElementsByClassName("showcase")[0]
-            show.innerHTML = "" //clears previous html
+            document.getElementsByClassName('showcase')[0].innerHTML = ""; //clears previous html
             for(let i = 0; i < 4; i++) {
                 //title tag
                 let projectTitle = document.createElement("a");
