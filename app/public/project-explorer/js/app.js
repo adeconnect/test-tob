@@ -127,12 +127,8 @@ if (document.cookie) {
             .then(res => res.json())
             .then(function(response) {
                 //console.log(response)
-                document.getElementById("login").style.visibility = "hidden";
-                document.getElementById("signup").style.visibility = "hidden";
-                let nameWelcome = document.getElementById("username")
-                nameWelcome.innerHTML = `<b>Hi, ${response.firstname}</b>`;
-                document.getElementById("logout").style.display = "block";
-                document.getElementById("username").style.display = "block";
+                let newDisplay = `<li class="nav-item"><a class="nav-link" id ="logout">Logout</a></li><li class="nav-item"><a class="nav-link" id ="username">Hi, ${response.firstname}</a></li>`
+                newNav.innerHTML = newDisplay
             })
             .catch(error => {
                 console.log(error);
