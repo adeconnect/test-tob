@@ -108,7 +108,7 @@ api.get("/users/:id", (req, res) => {
 });
 
 api.get("/projects", (req, res) => {
-  res.json(projects.getAll());
+  res.json(projects.getAll().reverse());
 });
 
 api.get("/projects/:id", (req, res) => {
