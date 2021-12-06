@@ -108,7 +108,8 @@ api.get("/users/:id", (req, res) => {
 });
 
 api.get("/projects", (req, res) => {
-  res.json(projects.getAll().reverse());
+  let data = projects.getAll().reverse();
+  res.json(data);
 });
 
 api.get("/projects/:id", (req, res) => {
